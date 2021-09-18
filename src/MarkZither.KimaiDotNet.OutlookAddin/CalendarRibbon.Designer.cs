@@ -64,8 +64,9 @@ namespace MarkZither.KimaiDotNet.OutlookAddin
             // CalendarRibbon
             // 
             this.Name = "CalendarRibbon";
-            this.RibbonType = "Microsoft.Outlook.Appointment, Microsoft.Outlook.Mail.Read, Microsoft.Outlook.Mee" +
-    "tingRequest.Read, Microsoft.Outlook.MeetingRequest.Send";
+            this.RibbonType = "Microsoft.Outlook.Appointment, Microsoft.Outlook.Explorer, Microsoft.Outlook.Mail" +
+    ".Compose, Microsoft.Outlook.Mail.Read, Microsoft.Outlook.MeetingRequest.Read, Mi" +
+    "crosoft.Outlook.MeetingRequest.Send";
             this.Tabs.Add(this.tab1);
             this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.CalendarRibbon_Load);
             this.tab1.ResumeLayout(false);
