@@ -13,5 +13,11 @@ namespace MarkZither.KimaiDotNet.OutlookAddin
         {
 
         }
+
+        private void btnApiCredentials_Click(object sender, RibbonControlEventArgs e)
+        {
+            SettingsWindow settingsWindow = new SettingsWindow();
+            settingsWindow.ShowDialog();
+        }
     }
 }

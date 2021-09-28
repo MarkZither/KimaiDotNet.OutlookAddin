@@ -37,7 +37,7 @@ namespace MarkZither.KimaiDotNet.OutlookAddin
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.group1 = this.Factory.CreateRibbonGroup();
-            this.button1 = this.Factory.CreateRibbonButton();
+            this.btnApiCredentials = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.group1.SuspendLayout();
             this.SuspendLayout();
@@ -51,15 +51,18 @@ namespace MarkZither.KimaiDotNet.OutlookAddin
             // 
             // group1
             // 
-            this.group1.Items.Add(this.button1);
+            this.group1.Items.Add(this.btnApiCredentials);
             this.group1.Label = "group1";
             this.group1.Name = "group1";
             // 
-            // button1
+            // btnApiCredentials
             // 
-            this.button1.Label = "button1";
-            this.button1.Name = "button1";
-            this.button1.ShowImage = true;
+            this.btnApiCredentials.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnApiCredentials.Label = "Api Credentials";
+            this.btnApiCredentials.Name = "btnApiCredentials";
+            this.btnApiCredentials.OfficeImageId = "PivotTableFieldSettings";
+            this.btnApiCredentials.ShowImage = true;
+            this.btnApiCredentials.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnApiCredentials_Click);
             // 
             // CalendarRibbon
             // 
@@ -81,7 +84,7 @@ namespace MarkZither.KimaiDotNet.OutlookAddin
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab1;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group1;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton button1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnApiCredentials;
     }
 
     partial class ThisRibbonCollection
